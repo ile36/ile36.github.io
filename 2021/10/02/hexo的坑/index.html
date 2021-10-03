@@ -326,10 +326,18 @@
             verify: verify,
             app_id: "DbaL0APcw0sbE8NdU2kYpKYA-gzGzoHsz",
             app_key: "QGXCQyriQgxYjgqtSEsnME41",
-            placeholder: "just to go",
-            avatar:"retro"
+            placeholder: "每日一笑！！",
+            avatar:"mp"
         });
     }
+</script>
+<script type="text/javascript">
+   fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("veditor").setAttribute("placeholder",data.hitokoto+"__"+data.from);
+    })
+    .catch(console.error)
 </script>
 
   </section>
