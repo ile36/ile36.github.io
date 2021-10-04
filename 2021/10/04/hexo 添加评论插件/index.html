@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: hexo | ile36的随机博客</title>
+  <title>二、hexo添加评论插件 | ile36的随机博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ile36的随机博客">
-<meta property="og:url" content="http://example.com/tags/hexo/index.html">
+  <meta name="description" content="hexo 添加评论插件研究了yilia自带的config.yml文档发现大部分有的评论插件不是关闭就是取消更新了，没错就很难受啊。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二、hexo添加评论插件">
+<meta property="og:url" content="http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="ile36的随机博客">
+<meta property="og:description" content="hexo 添加评论插件研究了yilia自带的config.yml文档发现大部分有的评论插件不是关闭就是取消更新了，没错就很难受啊。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/images/img.png">
+<meta property="og:image" content="http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/images/img2.png">
+<meta property="og:image" content="http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/images/img1.png">
+<meta property="og:image" content="http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/images/img3.png">
+<meta property="article:published_time" content="2021-10-03T17:21:20.359Z">
+<meta property="article:modified_time" content="2021-10-04T02:55:35.893Z">
 <meta property="article:author" content="ile36">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/images/img.png">
   
     <link rel="alternative" href="/atom.xml" title="ile36的随机博客" type="application/atom+xml">
   
@@ -152,37 +162,97 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-hexo 添加评论插件" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      二、hexo添加评论插件
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+
+        
+        
 <a href="/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" class="archive-article-date">
   	<time datetime="2021-10-03T17:21:20.359Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/">二、hexo添加评论插件</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="hexo-添加评论插件"><a href="#hexo-添加评论插件" class="headerlink" title="hexo 添加评论插件"></a>hexo 添加评论插件</h2><p>研究了yilia自带的config.yml文档发现大部分有的评论插件不是关闭就是取消更新了，没错就很难受啊。</p>
+<span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<h5 id="yilia自带评论插件"><a href="#yilia自带评论插件" class="headerlink" title="yilia自带评论插件"></a>yilia自带评论插件</h5><blockquote>
+<ol>
+<li>多说 （2017年3月宣布关闭）</li>
+<li>网易云跟帖（服务已停止）</li>
+<li>畅言（搜狐用的评论接口但是使用需要有备案号放弃）</li>
+<li>Disqus（国内被墙放弃了）</li>
+<li>Gitment（github的评论接口）</li>
+</ol>
+</blockquote>
+<p>以上五种为yilia的配置文档中自带的五种评论接口不过结合各种情况而考虑再三我都放弃了，但是博客嘛评论作为和作者沟通的途径不能没有，那只能继续找了呗。</p>
+<blockquote>
+<ol>
+<li>友言（继多说宣布关闭后，于2018年4月30日友言的上级公司也宣布关闭友言业务）</li>
+<li>来必力（看其他人说很强大，但咱没有用过不知道，咱只知道它是韩国的在国内不稳定，只能放弃）</li>
+<li>beaudar （与yilia主题风格不一样，需要配置其他东西，咱懒跳过了）</li>
+<li>valine（最后咱选了这个评论接口，这个接口是国人写的就像它主页上写的一样简洁、快速，但是也有缺点就是简洁到连后端管理界面都没有）</li>
+</ol>
+</blockquote>
+<p>废话不多说下面我们来引入valine评论接口（说实话也就是起始的时候选择比较困难，其他是真滴简单）</p>
+<h4 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h4><p>第一步是对yilia的配置文件进行修改增加，找到5、Gitment后面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#6、valine</span><br><span class="line">valine:</span><br><span class="line"> appid:  //id和key都是后面注册LeanCloud创建应用凭证后给的</span><br><span class="line"> appkey: </span><br><span class="line"> verify: false</span><br><span class="line"> notify: false</span><br><span class="line"> placeholder: 每日一笑！！</span><br><span class="line"> avatar: mp</span><br><span class="line"> visitor: true</span><br></pre></td></tr></table></figure>
+
+<p>第二步注册LeanCloud帐户，也就是跟着它的提示一步步走，需要实名。</p>
+<p>创建应用<img src="./images/img.png" alt="img1"></p>
+<p>应用计价选择选开发版因为免费，而且个人博客也用不太上那种商用的吧。</p>
+<p>好的创建完成之后我们就能在应用里面看到了，点进去选择设置=&gt;应用凭证能看见AppID和AppKey复制下来粘贴到yilila配置文件即可。</p>
+<p>=&gt;安全中心，主要是把web安全域名填上去填你博客地址，服务开关按需选取ok。</p>
+<p><img src="./images/img2.png" alt="web安全域名"></p>
+<p><img src="./images/img1.png" alt="服务开关"></p>
+<p>第三步前面的一系列配置都配置完成后当然就要在自己的博客上显示评论区域咯</p>
+<p>这一步需要对两个文件进行操作</p>
+<blockquote>
+<ol>
+<li>layout\_partial\article.ejs中的article.ejs文件</li>
+</ol>
+<p>*&lt;% if (!index &amp;&amp; post.comments){ %&gt;*后面添加下面代码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.valine &amp;&amp; theme.valine.appid &amp;&amp; theme.valine.appkey)&#123; %&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">&quot;comments&quot;</span> <span class="attr">class</span>=<span class="string">&quot;comments&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></span></span><br><span class="line"><span class="css"><span class="xml">        <span class="selector-class">.comments</span>&#123;<span class="attribute">margin</span>:<span class="number">30px</span>;<span class="attribute">padding</span>:<span class="number">10px</span>;<span class="attribute">background</span>:<span class="number">#fff</span>&#125;</span></span></span><br><span class="line"><span class="css"><span class="xml">        <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>:<span class="number">800px</span>)&#123;<span class="selector-class">.comments</span>&#123;<span class="attribute">margin</span>:auto;<span class="attribute">padding</span>:<span class="number">10px</span>;<span class="attribute">background</span>:<span class="number">#fff</span>&#125;&#125;</span></span></span><br><span class="line"><span class="css"><span class="xml">      </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br><span class="line"><span class="xml">      &lt;%- partial(&#x27;post/valine&#x27;, &#123;</span></span><br><span class="line"><span class="xml">        key: post.slug,</span></span><br><span class="line"><span class="xml">        title: post.title,</span></span><br><span class="line"><span class="xml">        url: config.url+url_for(post.path)</span></span><br><span class="line"><span class="xml">        &#125;) %&gt;</span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>layout\_partial\post文件夹下创建valine.ejs文件内部添加代码保存</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;vcomment&quot;</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;comment&quot;</span>&gt;&lt;/div&gt; </span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn1.lncld.net/static/js/3.0.4/av-min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//unpkg.com/valine/dist/Valine.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">var</span> notify = <span class="string">&#x27;&lt;%= theme.valine.notify %&gt;&#x27;</span> == <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">   <span class="keyword">var</span> verify = <span class="string">&#x27;&lt;%= theme.valine.verify %&gt;&#x27;</span> == <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">new</span> Valine(&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">el</span>: <span class="string">&#x27;.comment&#x27;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">notify</span>: notify,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">verify</span>: verify,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">app_id</span>: <span class="string">&quot;&lt;%= theme.valine.appid %&gt;&quot;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">app_key</span>: <span class="string">&quot;&lt;%= theme.valine.appkey %&gt;&quot;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">placeholder</span>: <span class="string">&quot;&lt;%= theme.valine.placeholder %&gt;&quot;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">            <span class="attr">avatar</span>:<span class="string">&quot;&lt;%= theme.valine.avatar %&gt;&quot;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">        &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>好了开启本地预览就能看见效果了</p>
+<h4 id="后台管理数据"><a href="#后台管理数据" class="headerlink" title="后台管理数据"></a>后台管理数据</h4><p>进<strong>应用</strong>里&gt;数据存储&gt;结构化数据</p>
+<p>选择里面的Comment class类</p>
+<p><img src="./images/img3.png" alt="数据管理"></p>
+<p>如果没有则创建Comment类即可，这样咱们就能对评论进行修改了</p>
+<h4 id="设置文章无评论"><a href="#设置文章无评论" class="headerlink" title="设置文章无评论"></a>设置文章无评论</h4><p>默认评论插件插入后是全部文章都有评论的但是我们有的文章不愿意看见评论所以我们就需要对文章设置隐藏评论操作</p>
+<p>在md文件头添加条件<em>comments: false</em></p>
+<p>这样发布的这篇文章就没有评论操作了</p>
+<hr>
+<p>参考链接:</p>
+<ul>
+<li>valine官方参考文档：<a target="_blank" rel="noopener" href="https://valine.js.org/">https://valine.js.org/</a></li>
+<li>hexo+yilia添加valine评论系统：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41287260/article/details/103049437">https://blog.csdn.net/weixin_41287260/article/details/103049437</a></li>
+<li>为Hexo添加Valine评论系统:<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43167980/article/details/113779387">https://blog.csdn.net/weixin_43167980/article/details/113779387</a></li>
+<li></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -194,58 +264,134 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/10/04/hexo%20%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/10/02/hexo%E7%9A%84%E5%9D%91/" class="archive-article-date">
-  	<time datetime="2021-10-02T07:50:52.198Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/10/02/Markdown%E8%AF%AD%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">markdown</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "DbaL0APcw0sbE8NdU2kYpKYA-gzGzoHsz",
+            app_key: "QGXCQyriQgxYjgqtSEsnME41",
+            placeholder: "每日一笑！！",
+            avatar:"mp"
+        });
+    }
+</script>
+
+  </section>
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/10/02/hexo%E7%9A%84%E5%9D%91/">一、hexo的个人头像不显示</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -278,9 +424,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
