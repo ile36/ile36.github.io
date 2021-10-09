@@ -154,6 +154,171 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-一、网络基础知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/10/09/%E4%B8%80%E3%80%81%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">一、网络基础知识</a>
+    </h1>
+  
+
+        
+        
+<a href="/2021/10/09/%E4%B8%80%E3%80%81%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="archive-article-date">
+  	<time datetime="2021-10-09T03:44:58.816Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><h5 id="OSI参考模型的各层和功能（从下往上）：物数网传会表应"><a href="#OSI参考模型的各层和功能（从下往上）：物数网传会表应" class="headerlink" title="OSI参考模型的各层和功能（从下往上）：物数网传会表应"></a>OSI参考模型的各层和功能（从下往上）：物数网传会表应</h5><table>
+<thead>
+<tr>
+<th align="center">OSI参考模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href>Application Layer</a></td>
+</tr>
+<tr>
+<td align="center"><a href>Presentation Layer</a></td>
+</tr>
+<tr>
+<td align="center"><a href>Session Layer</a></td>
+</tr>
+<tr>
+<td align="center"><a href>Transport Layer</a></td>
+</tr>
+<tr>
+<td align="center"><a href="#%E7%BD%91%E7%BB%9C%E5%B1%82">Network Layer</a></td>
+</tr>
+<tr>
+<td align="center"><a href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82">Data Link Layer</a></td>
+</tr>
+<tr>
+<td align="center"><a href="#%E7%89%A9%E7%90%86%E5%B1%82">Physical Layer</a></td>
+</tr>
+</tbody></table>
+<h5 id="TCP-IP-参考模型"><a href="#TCP-IP-参考模型" class="headerlink" title="TCP/IP 参考模型"></a>TCP/IP 参考模型</h5><table>
+<thead>
+<tr>
+<th align="center">TCP/IP参考模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Application Layer</td>
+</tr>
+<tr>
+<td align="center">Transport Layer</td>
+</tr>
+<tr>
+<td align="center">Network Layer</td>
+</tr>
+<tr>
+<td align="center">Physical Access Layer</td>
+</tr>
+</tbody></table>
+<h5 id="数据封装与解封"><a href="#数据封装与解封" class="headerlink" title="数据封装与解封"></a>数据封装与解封</h5><p>当传输数据时传输的数据会通过OSI模型将数据转换成比特流的形式（封装）进行发送到另一方，</p>
+<p>另一方接收到比特流数据后又通过OSI模型将比特流转换成人所能识别的数据（解封或拆封）进行识别。</p>
+<p>即</p>
+<p>将人所能识别的数据经过OSI模型转换为比特流这种人不擅长识别的数据的过程（封装）</p>
+<p>反过来，将比特流转通过OSI换成识别数据的过程就是（解封）</p>
+<p>共同点就是：都要经过OSI参考模型</p>
+<p>至于为什么要这么麻烦的去传输数据：1、保护数据的完整性</p>
+<p>​                                                                2、更准确的发送给数据接受者</p>
+<p>你也不想收到的数据是缺头少尾的吧。</p>
+<p>TCP/IP主要注重的方面是数据的传输而OSI是在数据的保护上下了大力气</p>
+<hr>
+<h3 id="OSI七层模型（自下而上）"><a href="#OSI七层模型（自下而上）" class="headerlink" title="OSI七层模型（自下而上）"></a>OSI七层模型（自下而上）</h3><h6 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h6><p>作用：通讯时提供物理链路，实现二进制数据流（bit流）的交接（同时定义网络硬件接口）</p>
+<p>设备：集线器、中继器、网线等</p>
+<p>如果想要细致了解网络层的工作原理以及传输方式在这给大家推荐一本书<em><strong>《穿越计算机的迷雾》–李忠</strong></em>这本书用十分通俗的语言讲解了计算机电到传输数据的过程清新脱俗、简单易懂有时间的话推荐像小说一般用空闲时间阅读一下</p>
+<h6 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h6><p>作用：负责将网络层传递的数据封装成帧，保护数据无差错传输</p>
+<p>记一个单词Frame数据帧</p>
+<p>设备：二层交换机、网桥、网卡（也工作在物理层）</p>
+<p>它就相当于一个中间商保镖要知道物理层传输比特流是通过传输介质来传输的，有传输那就有损耗，而这个数据链路层就相当于保镖把你完好无损的送到目的地</p>
+<p>那保镖怎么保护数据安全呢：</p>
+<ol>
+<li><strong>链路管理</strong>：负责建立双方会面的桥梁，同时负责会面时的安全维护也就是环境探测，结束会面时负责清理痕迹拆除桥梁</li>
+<li><strong>帧同步</strong>：既然是信息的传递，信息是否传递准确很重要，所以这个保镖还要负责确认传递信息正确与否。即传输的每个帧的内容不仅仅是传输的数据还有校验码</li>
+<li><strong>流量控制</strong>：如果双方的说话速度不适配，一个说的很快，一个说的慢这样肯定不行，如果说的快了接收方听的慢接收的信息肯定不完整，所以它需要设置流量限制以及在接受方来不及接收时控制发送方速率</li>
+<li><strong>差错控制</strong>：显而易见就是接受方收到数据帧时会检查数据是否准确，如果有错就叫你重发</li>
+<li><strong>透明传输</strong>：消息是消息，命令是命令，控制分工明确信息</li>
+<li><strong>寻址</strong>：好理追根溯源接收方得知道发送方是谁吧这也是确认信息是否可靠的方式之一啊</li>
+</ol>
+<p>还有一个知识点：</p>
+<p>​    数据链路层又可分为两个层MAC层和LLC层</p>
+<p>​    MAC（介质访问控制）</p>
+<p>MAC负责数据链路层的具体功能</p>
+<p>​    LLC（逻辑链路层控制）</p>
+<p>LLC负责承接上层数据为上层提供服务把接收到的包发给MAC层</p>
+<h6 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h6><p>作用：为网络中的计算机编址，翻译逻辑地址，寻找不同网络中的计算机之间传输数据的最佳通路</p>
+<p>设备：路由器、三层交换机</p>
+<p>传输单位：分组/包    Packet</p>
+<h6 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h6><p>作用：在源主机和目的主机之间提供可靠的端对端通信</p>
+<p>传输信息的基本单位：报文 message</p>
+<h6 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h6><p>作用：建立、管理、终止两个主机的会话关系、数据的传送</p>
+<h6 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h6><p>作用：解决因各种系统使用不同数据格式而导致无法相互通信问题，信息的切换</p>
+<p>服务：数据语法的转换、传送语法的选择</p>
+<h6 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h6><p>作用：接口，使应用程序能向用户提供网络服务</p>
+<p>协议：http、ftp、dns、telnet、dhcp、smtp、pop3</p>
+<hr>
+<h3 id="TCP-IP参考模型"><a href="#TCP-IP参考模型" class="headerlink" title="TCP/IP参考模型"></a>TCP/IP参考模型</h3><h6 id="网络接口层"><a href="#网络接口层" class="headerlink" title="网络接口层"></a>网络接口层</h6><p>作用：相当于OSI模型的物理层和数据链路层，拥有它们的功能</p>
+<p>协议：Ethernet、Frame Relay、X.25</p>
+<h6 id="网络层-1"><a href="#网络层-1" class="headerlink" title="网络层"></a>网络层</h6><p>对应OSI模型的网络层</p>
+<p>作用：数据封装、寻址、路由、控制</p>
+<p>协议：IP、ARP、RARP、ICMP</p>
+<h6 id="传输层-1"><a href="#传输层-1" class="headerlink" title="传输层"></a>传输层</h6><p>对应OSI传输层</p>
+<p>协议：TCP、UDP</p>
+<h6 id="应用层-1"><a href="#应用层-1" class="headerlink" title="应用层"></a>应用层</h6><p>对应与OSI模型的应用层、表示层、会话层</p>
+<p>协议：FTP、TFTP、SMTP、DNS、HTTP</p>
+<hr>
+<p>tips:以上皆为总结有什么不对欢迎指出，定细心改正</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/10/09/%E4%B8%80%E3%80%81%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-一、java基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -636,6 +801,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
@@ -644,15 +817,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">English</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
